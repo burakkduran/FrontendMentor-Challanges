@@ -1,0 +1,233 @@
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: var(--light-grayish-cyan);
+}
+
+.container {
+  width: 936px;
+  
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+}
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+header span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--very-dark-cyan);
+  font-family: "Space Mono", monospace;
+  letter-spacing:0.3rem;
+}
+
+/* Main Content */
+
+.mainContent {
+  background-color: var(--white);
+  padding: 36px;
+  border-radius: 16px;
+  display: flex;
+  gap: 24px;
+}
+
+/* Left Content */
+
+.leftContent {
+  width: 50%;
+  height: 380px;
+}
+
+/* Bill and People Number */
+.bill {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+label,
+.label {
+  color: var(--dark-grayish-cyan);
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+.peopleNumber {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+}
+
+input {
+  text-align: right;
+  background-color: var(--very-light-grayish-cyan);
+  border: 0;
+  padding: 8px 16px 8px 8px;
+  border-radius: 8px;
+  color: var(--very-dark-cyan);
+
+}
+
+/* Hiding input arrow */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder {
+  text-align: right;
+  color: var(--grayish-cyan);
+}
+
+input:hover, input:focus-visible{
+  outline:solid var(--strong-cyan) 2px;
+}
+
+.tipSelect {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tip {
+  height: 3rem;
+  flex-basis: 32%;
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 0;
+}
+
+.tip:hover {
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+  cursor: pointer;
+}
+
+.activate {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+
+.customTip {
+  padding: 0;
+  flex-basis: 28%;
+  width: 10px;
+  height: 3rem;
+  background-color: var(--very-light-grayish-cyan);
+  color: var(--dark-grayish-cyan);
+  padding: 0px 16px 0px 0px;
+}
+
+.customTip:hover{
+  cursor: pointer;
+}
+
+
+
+/* Right Content */
+
+.rightContent {
+  width: 50%;
+  background-color: var(--very-dark-cyan);
+  padding: 16px;
+  border-radius: 16px;
+  height: 347px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.tipAmount, .total {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.tipAmount .left, .total .left{
+  color: var(--white);
+  font-size: 16px;
+}
+
+.person {
+  color: var(--dark-grayish-cyan);
+  margin-top: 8px;
+}
+
+.tipAmount .right, .total .right {
+  color: var(--strong-cyan);
+  font-size: 32px;
+}
+
+.rightContent button {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  border: 0;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 100px;
+  width: 90%;
+  align-self: center;
+}
+
+.rightContent button:hover {
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+  .mainContent {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .rightContent, .leftContent {
+    width: 100%;
+  }
+
+  .leftContent {
+    height: 100%;
+  }
+ 
+}
+
+@media screen and (max-width: 475px) {
+
+  .tip{
+    flex-basis: 45%;
+  }
+
+  .customTip {
+    flex-basis: 40%;
+  }
+}
+  
